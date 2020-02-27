@@ -2,7 +2,7 @@ const mongoose  = require('mongoose');
 const validator = require('validator');
 
 const SchemeConfig = {timestamps: true, skipVersioning: true};
-const SurfaceSchema  = new mongoose.Schema({
+const AccessorySchema  = new mongoose.Schema({
 
     img: {
       type      : String,
@@ -16,7 +16,7 @@ const SurfaceSchema  = new mongoose.Schema({
       validator : value => !validator.isEmpty(value)
     },
 
-    description: {
+    memory: {
       type      : String,
       required  : true,
       validator : value => !validator.isEmpty(value)
@@ -27,7 +27,7 @@ const SurfaceSchema  = new mongoose.Schema({
       required  : true,
       validator : value => !validator.isEmpty(value)
     },
-    
+
     price: {
       type      : String,
       required  : true,
@@ -36,4 +36,4 @@ const SurfaceSchema  = new mongoose.Schema({
 
   }, SchemeConfig);
 
-  module.exports.Surface = mongoose.model('Surface', SurfaceSchema);
+  module.exports.Accessory = mongoose.model('Accessory', AccessorySchema);

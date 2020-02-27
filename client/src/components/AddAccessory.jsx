@@ -10,11 +10,11 @@ class AddAccessory extends React.Component {
   // #######################################################
 
   state = {
-    img     : '',
-    name     : '',
-    description     : '',
-    colour     : '',
-    price     : ''
+    img         : '',
+    name        : '',
+    description : '',
+    colour      : '',
+    price       : ''
   }
 
   // #######################################################
@@ -43,17 +43,17 @@ class AddAccessory extends React.Component {
           <form onSubmit={this.handleSubmit.bind(this)}>
 
             <div>
-              <label>Accessory Image:
-                <input type='' value={this.state.img} onChange={this.handleNameUpdate.bind(this)} />
+            <label>Accessory Image:
+                <input type='' value={this.state.img} onChange={this.handleImageUpdate.bind(this)} />
               </label>
               <label>Accessory Name:
-                <input type='' value={this.state.name} onChange={this.handleMemoryUpdate.bind(this)} />
+                <input type='' value={this.state.name} onChange={this.handleNameUpdate.bind(this)} />
               </label>
               <label>Accessory Description:
-                <input type='' value={this.state.description} onChange={this.handleColourUpdate.bind(this)} />
+                <input type='' value={this.state.description} onChange={this.handleDescriptionUpdate.bind(this)} />
               </label>
               <label>Accessory Colour:
-                <input type='' value={this.state.colour} onChange={this.handlePriceUpdate.bind(this)} />
+                <input type='' value={this.state.colour} onChange={this.handleColourUpdate.bind(this)} />
               </label>
               <label>Accessory Price:
                 <input type='' value={this.state.price} onChange={this.handlePriceUpdate.bind(this)} />
@@ -77,12 +77,14 @@ class AddAccessory extends React.Component {
       );
     }
   }
-
+  handleImageUpdate(e) {
+    this.setState({img: e.target.value || null});
+  }
   handleNameUpdate(e) {
     this.setState({name: e.target.value || null});
   }
-  handleMemoryUpdate(e) {
-    this.setState({memory: e.target.value || null});
+  handleDescriptionUpdate(e) {
+    this.setState({description: e.target.value || null});
   }
   handleColourUpdate(e) {
     this.setState({colour: e.target.value || null});
@@ -101,16 +103,16 @@ class AddAccessory extends React.Component {
     e.preventDefault();
 
     // Perform a POST call for the new data
-    fetch(urlToCurrentDomain(`${Config.surfacesAPI}`), {
+    fetch(urlToCurrentDomain(`${Config.accessoriesAPI}`), {
       method : 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
         img      : this.state.img,
-        name    : this.state.name,
+        name      : this.state.name,
         description    : this.state.description,
-        colour     : this.state.colour,
+        colour    : this.state.colour,
         price     : this.state.price
       })}
     )

@@ -3,7 +3,7 @@ import {Link}             from '@reach/router';
 import urlToCurrentDomain from '../lib/urlToCurrentDomain';
 import * as Config        from '../config.json'
 
-class Surface extends React.Component {
+class Accessory extends React.Component {
 
   // #######################################################
   // # Local state
@@ -17,7 +17,7 @@ class Surface extends React.Component {
 
   render() {
 
-    if (!this.state.surface && this.state.surfaceLoaded === true) {
+    if (!this.state.accessory && this.state.accessoryLoaded === true) {
       return (
         <p>Error loading Surfaces. Try again later.</p>
       );
@@ -56,4 +56,4 @@ class Surface extends React.Component {
 
 }
 
-export default Surface;
+export default Accessory;
