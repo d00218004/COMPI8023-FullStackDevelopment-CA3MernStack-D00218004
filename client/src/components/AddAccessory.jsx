@@ -28,8 +28,8 @@ class AddAccessory extends React.Component {
         <div>
           <h1>Error</h1>
           <p>Sorry, there was an error creating the Accessory. The error was: {this.state.reportedError || 'Unknown'}</p>
-          <a href='localhost:3000' onClick={this.resetForRetry.bind(this)}>Try again</a>&nbsp;|&nbsp;
-          <Link to='/'>Back to All Accessories</Link>
+          <a href='localhost:3000/accessories' onClick={this.resetForRetry.bind(this)}>Try again</a>&nbsp;|&nbsp;
+          <Link to='/accessories/'>Back to All Accessories</Link>
         </div>
       );
     } else if (this.state.processingAdd) {

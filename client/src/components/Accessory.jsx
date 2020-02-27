@@ -19,38 +19,39 @@ class Accessory extends React.Component {
 
     if (!this.state.accessory && this.state.accessoryLoaded === true) {
       return (
-        <p>Error loading Surfaces. Try again later.</p>
+        <p>Error loading Accessories. Try again later.</p>
       );
-    } else if (!this.state.surface) {
+    } else if (!this.state.accessory) {
       return (
-        <p>Loading Surfaces...</p>
+        <p>Loading Accessories...</p>
       );
-    } else if (this.state.surface.length === 0) {
+    } else if (this.state.accessory.length === 0) {
       return (
-        <p>Sorry, no Surfaces are available</p>
+        <p>Sorry, no Accessories are available</p>
       );
     } else {
       return (
         <div>
-          <h1>{this.state.surface.name}</h1>
-          <h3>Memory: {this.state.surface.memory}</h3>
-          <h3>Colour: {this.state.surface.colour}</h3>
-          <h3>Price:  € {this.state.surface.price}</h3>
-          <Link to='/'>Back to All Surfaces</Link>
+          <h1>{this.state.accessory.img}</h1>
+          <h1>{this.state.accessory.name}</h1>
+          <h3>Description: {this.state.accessory.description}</h3>
+          <h3>Colour: {this.state.accessory.colour}</h3>
+          <h3>Price:  € {this.state.accessory.price}</h3>
+          <Link to='/accessories'>Back to All Accessories</Link>
         </div>
       )
     }
   }
 
   componentDidMount() {
-    fetch(urlToCurrentDomain(`${Config.surfacesAPI}/${this.props.surfaceID}`))
+    fetch(urlToCurrentDomain(`${Config.accessoriesAPI}/${this.props.accessoriesID}`))
       .then (res  => res.json())
       .then (json => {
-        this.setState({surface       : json});
-        this.setState({surfaceLoaded : true});
+        this.setState({accessory       : json});
+        this.setState({accessoryLoaded : true});
       })
       .catch(err => {
-        this.setState({surfaceLoaded: true});
+        this.setState({accessoryLoaded: true});
       });
   }
 

@@ -38,7 +38,7 @@ class Accessories extends React.Component {
               <li key={`accessory_${accessory._id}`}><Link to={`/accessory/${accessory._id}`}>{accessory.name}</Link></li>
             ))}
           </ul>
-          <p><Link to='/add-accessory'>Add a new Accessory</Link></p>
+          <p><Link to='/accessories/add-accessory'>Add a new Accessory</Link></p>
         </div>
       )
     }
