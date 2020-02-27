@@ -10,7 +10,10 @@ class AddSurface extends React.Component {
   // #######################################################
 
   state = {
-    title     : ''
+    name     : '',
+    memory     : '',
+    colour     : '',
+    price     : ''
   }
 
   // #######################################################
@@ -24,7 +27,7 @@ class AddSurface extends React.Component {
         <div>
           <h1>Error</h1>
           <p>Sorry, there was an error creating the Surface. The error was: {this.state.reportedError || 'Unknown'}</p>
-          <a href='#' onClick={this.resetForRetry.bind(this)}>Try again</a>&nbsp;|&nbsp;
+          <a href='localhost:3000' onClick={this.resetForRetry.bind(this)}>Try again</a>&nbsp;|&nbsp;
           <Link to='/'>Back to All Surfaces</Link>
         </div>
       );
@@ -42,7 +45,17 @@ class AddSurface extends React.Component {
               <label>Surface Name:
                 <input type='' value={this.state.name} onChange={this.handleNameUpdate.bind(this)} />
               </label>
+              <label>Surface Memory:
+                <input type='' value={this.state.memory} onChange={this.handleMemoryUpdate.bind(this)} />
+              </label>
+              <label>Surface Colour:
+                <input type='' value={this.state.colour} onChange={this.handleColourUpdate.bind(this)} />
+              </label>
+              <label>Surface Price:
+                <input type='' value={this.state.price} onChange={this.handlePriceUpdate.bind(this)} />
+              </label>
             </div>
+            
 
             {/* <div>
               <label>Surface Content:
@@ -55,7 +68,7 @@ class AddSurface extends React.Component {
             </div>
 
           </form>
-          <Link to='/'>Back to All Surface</Link>
+          <Link to='/'>Back to All Surfaces</Link>
         </div>
       );
     }
@@ -64,11 +77,20 @@ class AddSurface extends React.Component {
   handleNameUpdate(e) {
     this.setState({name: e.target.value || null});
   }
-
+  handleMemoryUpdate(e) {
+    this.setState({memory: e.target.value || null});
+  }
+  handleColourUpdate(e) {
+    this.setState({colour: e.target.value || null});
+  }
+  handlePriceUpdate(e) {
+    this.setState({price: e.target.value || null});
+  }
+  /*
   handleContentUpdate(e) {
     this.setState({content: e.target.value || null});
   }
-
+  */
   handleSubmit(e) {
 
     // Prevent the default form submit action
@@ -81,9 +103,10 @@ class AddSurface extends React.Component {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        authoredBy: this.state.authoredBy,
-        title     : this.state.title,
-        content   : this.state.content
+        name      : this.state.name,
+        memory    : this.state.memory,
+        colour    : this.state.colour,
+        price     : this.state.price
       })}
     )
       .then (res  => {

@@ -5,14 +5,14 @@ const Surface   = require('../models/Surface').Surface;
 
 /**
  * Functionality for this route:
- *  C   POST    /Cakes/        Create a new Cake
- *  R   GET     /Cakes         Gets an array of all Cakes
- *  R   GET     /Cakes/:id     Get a single Cake, by ID
- *  U   PUT     /Cakes/:id     Update a single Cake, by id
- *  D   DELETE  /Cakes/:id     Delete a single Cake, by ID
+ *  C   POST    /Surfaces/        Create a new Surface
+ *  R   GET     /Surfaces         Gets an array of all Surfaces
+ *  R   GET     /Surfaces/:id     Get a single Surface, by ID
+ *  U   PUT     /Surfaces/:id     Update a single Surface, by id
+ *  D   DELETE  /Surfaces/:id     Delete a single Surface, by ID
  */
 
-// GET an array of all Cakes change
+// GET an array of all Surfaces change
 router.get('/', (req, res) => {
     return mongoose
       .model('Surface')
@@ -24,7 +24,7 @@ router.get('/', (req, res) => {
       );
   });
 
-  // GET a single cake by ID
+  // GET a single Surface by ID
 router.get('/:id([0-9a-fA-F]{24})', (req, res) => {
   return mongoose
     .model('Surface')
@@ -36,10 +36,13 @@ router.get('/:id([0-9a-fA-F]{24})', (req, res) => {
     );
 });
 
-// POST Create a new cake
+// POST Create a new Surface
 router.post('/', (req, res) => {
   return new Surface({
-    title     : req.body.title,
+    name     : req.body.name,
+    memory    : req.body.memory,
+    colour    : req.body.colour,
+    price    : req.body.price,
   })
   .save()
   .then (surface => Surface.populate(surface, {path: '_id'}))
@@ -50,7 +53,7 @@ router.post('/', (req, res) => {
   );
 });
 
-// DELETE Delete a topic with a given ID
+// DELETE Delete a Surface with a given ID
 router.delete('/:id([0-9a-fA-F]{24})', (req, res) => {
   return Surface
     .deleteOne({_id: req.params.id})
@@ -61,13 +64,16 @@ router.delete('/:id([0-9a-fA-F]{24})', (req, res) => {
     );
 });
 
-// PUT Update a cake
+// PUT Update a Surface
 router.put('/:id([0-9a-fA-F]{24})', (req, res) => {
   return Surface
     .findOneAndUpdate(
       {_id: req.params.id},
       {$set: {
-        title  : req.body.title,
+        name     : req.body.name,
+        memory     : req.body.memory,
+        colour     : req.body.colour,
+        price     : req.body.price,
       }},
       {new: true}
     )
