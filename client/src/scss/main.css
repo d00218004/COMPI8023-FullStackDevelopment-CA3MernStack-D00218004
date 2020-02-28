@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,700,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Nunito:700&display=swap");
 .bg-dark {
   background-color: #00a2ff !important;
 }
@@ -13,14 +15,28 @@ span {
   width: 150px !important;
 }
 
-body, p, h5 {
-  font-family: 'Roboto';
-  color: Blue;
+body {
+  color: Black;
+  font-family: 'Nunito';
+  text-shadow: 4px 4px 4px #aaa;
 }
 
 /*h2, h6*/
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Roboto Slab';
   color: Black;
+  text-shadow: 4px 4px 4px #aaa;
+}
+
+div.product-image img {
+  width: 100%;
+  height: 100%;
+}
+
+#product-description {
+  color: #00a2ff;
+}
+
+#product-specification {
+  color: #00a2ff;
 }
 /*# sourceMappingURL=main.css.map */

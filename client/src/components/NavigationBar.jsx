@@ -11,7 +11,7 @@ class Navmenu extends React.Component {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="mr-auto">
-                        <Nav.Link href="./accessories">Accessories</Nav.Link>
+                        <Nav.Link href="../../accessories">Accessories</Nav.Link>
                         <Nav.Link href="#pricing">Pricing</Nav.Link>
                         <NavDropdown title="Helpful Links" id="collasible-nav-dropdown">
                             <NavDropdown.Item href="#xbox">Xbox</NavDropdown.Item>

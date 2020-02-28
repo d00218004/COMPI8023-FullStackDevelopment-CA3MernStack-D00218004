@@ -1,7 +1,7 @@
-import React              from 'react';
+import React from 'react';
 import urlToCurrentDomain from '../lib/urlToCurrentDomain';
-import {Link}             from '@reach/router';
-import * as Config        from '../config.json'
+import { Link } from '@reach/router';
+import * as Config from '../config.json'
 
 class Accessories extends React.Component {
 
@@ -35,8 +35,14 @@ class Accessories extends React.Component {
           <h1>All Accessories in the database</h1>
           <ul>
             {this.state.accessories.map(accessory => (
-              <li key={`accessory_${accessory._id}`}><Link to={`/accessory/${accessory._id}`}>{accessory.name}</Link></li>
-            ))}
+              <li
+                key={`accessory_${accessory._id}`}>
+                <img src={accessory.img} alt="Product Image" />
+                <Link to={`/accessory/${accessory._id}`}>{accessory.name}</Link>
+              </li>
+              
+            ))
+            }
           </ul>
           <p><Link to='/accessories/add-accessory'>Add a new Accessory</Link></p>
         </div>
@@ -46,13 +52,13 @@ class Accessories extends React.Component {
 
   componentDidMount() {
     fetch(urlToCurrentDomain(Config.accessoriesAPI))
-      .then (res  => res.json())
-      .then (json => {
-        this.setState({accessories       : json});
-        this.setState({accessoriesLoaded : true});
+      .then(res => res.json())
+      .then(json => {
+        this.setState({ accessories: json });
+        this.setState({ accessoriesLoaded: true });
       })
       .catch(err => {
-        this.setState({accessoriesLoaded: true});
+        this.setState({ accessoriesLoaded: true });
       });
   }
 

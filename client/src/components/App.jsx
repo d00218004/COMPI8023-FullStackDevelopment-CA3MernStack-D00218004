@@ -11,6 +11,7 @@ import '../scss/main.css';
 
 import Navmenu from './NavigationBar';
 import Slider from './Slider';
+import Breadcrumb from './Breadcrumb';
 
 class App extends React.Component {
 
@@ -18,16 +19,17 @@ class App extends React.Component {
     return (
       <div>
         <Navmenu />
+        <Breadcrumb />
         <Slider />
-      <Router>
-        <Surfaces path='/' />
-        <Surface path='/surface/:surfaceID' />
-        <AddSurface path='/add-surface/' />
-        
-        <Accessories path='/accessories' />
-        <Accessory path='/accessories/:accessoryID' />
-        <AddAccessory path='/accessories/add-accessory/' />
-      </Router>
+        <Router>
+          <Surfaces path='/' />
+          <Surface path='/surface/:surfaceID' />
+          <AddSurface path='/add-surface/' />
+
+          <Accessories path='/accessories' />
+          <Accessory path='/accessory/:accessoryID' />
+          <AddAccessory path='/accessories/add-accessory/' />
+        </Router>
       </div>
     );
   }
