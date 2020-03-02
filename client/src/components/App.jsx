@@ -7,11 +7,8 @@ import Accessories from './Accessories';
 import AddAccessory from './AddAccessory';
 import Accessory from './Accessory';
 import '../scss/main.css';
-
-
 import Navmenu from './NavigationBar';
 import Slider from './Slider';
-import Breadcrumb from './Breadcrumb';
 
 class App extends React.Component {
 
@@ -19,7 +16,6 @@ class App extends React.Component {
     return (
       <div>
         <Navmenu />
-        <Breadcrumb />
         <Slider />
         <Router>
           <Surfaces path='/' />

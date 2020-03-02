@@ -2,12 +2,13 @@
 
 import React from 'react';
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
+import logo                         from './images/logo.png';
 class Navmenu extends React.Component {
 
     render() {
         return (
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-                <Navbar.Brand href="./">Microsoft Store</Navbar.Brand>
+                <Navbar.Brand href="./"><img id="logo" src={logo} alt="Surface Laptop 3"/></Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="mr-auto">

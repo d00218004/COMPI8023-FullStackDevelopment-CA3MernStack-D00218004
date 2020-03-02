@@ -2,7 +2,16 @@
 @import url("https://fonts.googleapis.com/css?family=Nunito:400,700,900&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Nunito:700&display=swap");
 .bg-dark {
-  background-color: #00a2ff !important;
+  background-color: white !important;
+}
+
+#logo {
+  height: 20px;
+  width: auto;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: grey;
 }
 
 span {

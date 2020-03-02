@@ -55,7 +55,6 @@ class Surface extends React.Component {
                     <h6 id='product-specification'>Price: </h6>
                     <p className='card-text'>{this.state.surface.price}</p>
                     <Button href='/' variant="success">Back to All Surfaces</Button>
-
                   </div>
                 </div>
               </div>

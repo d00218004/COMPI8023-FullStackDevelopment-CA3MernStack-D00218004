@@ -1,11 +1,11 @@
-import React from 'react';
-import { Link } from '@reach/router';
-import urlToCurrentDomain from '../lib/urlToCurrentDomain';
-import * as Config from '../config.json';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-
+import React                from 'react';
+import { Link }             from '@reach/router';
+import urlToCurrentDomain   from '../lib/urlToCurrentDomain';
+import * as Config          from '../config.json';
+import Container            from 'react-bootstrap/Container';
+import Row                  from 'react-bootstrap/Row';
+import Col                  from 'react-bootstrap/Col';
+import Button               from 'react-bootstrap/Button';
 class Accessory extends React.Component {
 
   // #######################################################
@@ -36,6 +36,7 @@ class Accessory extends React.Component {
       return (
 
         <Row>
+        <div class="container-fluid">
           <div className='card mb-4'>
             <h2 className='card-header'>{this.state.accessory.name}</h2>
             <div className='row'>
@@ -56,10 +57,11 @@ class Accessory extends React.Component {
                   <p className='card-text'>{this.state.accessory.colour}</p>
                   <h6 id='product-specification'>Price: </h6>
                   <p className='card-text'>{this.state.accessory.price}</p>
-                  <Link to='../../accessories'>Back to All Accessories</Link>
+                  <Button href='../../accessories' variant="success">Back to All Accessories</Button>
                 </div>
               </div>
             </div>
+          </div>
           </div>
         </Row>
       )
