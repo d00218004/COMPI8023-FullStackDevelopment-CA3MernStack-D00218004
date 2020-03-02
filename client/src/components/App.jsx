@@ -4,7 +4,7 @@ import Surfaces from './Surfaces';
 import Surface from './Surface';
 import AddSurface from './AddSurface';
 import Accessories from './Accessories';
-import AddAccessory from './AddCake';
+import AddAccessory from './AddAccessory';
 import Accessory from './Accessory';
 import '../scss/main.css';
 

@@ -16,7 +16,7 @@ const AccessorySchema  = new mongoose.Schema({
       validator : value => !validator.isEmpty(value)
     },
 
-    memory: {
+    description: {
       type      : String,
       required  : true,
       validator : value => !validator.isEmpty(value)

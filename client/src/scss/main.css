@@ -39,4 +39,9 @@ div.product-image img {
 #product-specification {
   color: #00a2ff;
 }
+
+#product-image {
+  width: 500px;
+  height: auto;
+}
 /*# sourceMappingURL=main.css.map */

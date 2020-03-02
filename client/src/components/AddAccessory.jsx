@@ -10,11 +10,10 @@ class AddAccessory extends React.Component {
   // #######################################################
 
   state = {
-    img         : '',
-    name        : '',
-    description : '',
-    colour      : '',
-    price       : ''
+    name     : '',
+    description     : '',
+    colour     : '',
+    price     : ''
   }
 
   // #######################################################
@@ -39,13 +38,10 @@ class AddAccessory extends React.Component {
     } else {
       return (
         <div>
-          <h1>Add a Accessory</h1>
+          <h1>Add an Accessory</h1>
           <form onSubmit={this.handleSubmit.bind(this)}>
 
             <div>
-            <label>Accessory Image:
-                <input type='' value={this.state.img} onChange={this.handleImageUpdate.bind(this)} />
-              </label>
               <label>Accessory Name:
                 <input type='' value={this.state.name} onChange={this.handleNameUpdate.bind(this)} />
               </label>
@@ -72,7 +68,7 @@ class AddAccessory extends React.Component {
             </div>
 
           </form>
-          <Link to='/'>Back to All Accessories</Link>
+          <Link to='/accessories'>Back to all Accessories</Link>
         </div>
       );
     }

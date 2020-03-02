@@ -1,8 +1,9 @@
-import React              from 'react';
-import {Link}             from '@reach/router';
+import React from 'react';
+import { Link } from '@reach/router';
 import urlToCurrentDomain from '../lib/urlToCurrentDomain';
-import * as Config        from '../config.json'
-
+import * as Config from '../config.json'
+import Row from 'react-bootstrap/Row';
+import Button from 'react-bootstrap/Button';
 class Surface extends React.Component {
 
   // #######################################################
@@ -31,26 +32,50 @@ class Surface extends React.Component {
       );
     } else {
       return (
-        <div>
-          <h1>{this.state.surface.name}</h1>
-          <h3>Memory: {this.state.surface.memory}</h3>
-          <h3>Colour: {this.state.surface.colour}</h3>
-          <h3>Price:  € {this.state.surface.price}</h3>
-          <Link to='/'>Back to All Surfaces</Link>
-        </div>
+        <Row>
+          <div class="container-fluid">
+            <div className='card mb-4'>
+              <h2 className='card-header'>{this.state.surface.name}</h2>
+              <div className='row'>
+
+                <div>
+                  <div className="product-image">
+                    <img id="product-image" src={this.state.surface.img} alt="Product Image" />
+                  </div>
+                </div>
+
+                <div>
+                  <div className='card-body'>
+                    <h6 id='product-description' >Name: </h6>
+                    <p className='card-text'>{this.state.surface.name}</p>
+                    <h6 id='product-description' >Memory: </h6>
+                    <p className='card-text'>{this.state.surface.memory}</p>
+                    <h6 id='product-specification'>Colour: </h6>
+                    <p className='card-text'>{this.state.surface.colour}</p>
+                    <h6 id='product-specification'>Price: </h6>
+                    <p className='card-text'>{this.state.surface.price}</p>
+                    <Button href='/' variant="success">Back to All Surfaces</Button>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </Row>
+
       )
     }
   }
 
   componentDidMount() {
     fetch(urlToCurrentDomain(`${Config.surfacesAPI}/${this.props.surfaceID}`))
-      .then (res  => res.json())
-      .then (json => {
-        this.setState({surface       : json});
-        this.setState({surfaceLoaded : true});
+      .then(res => res.json())
+      .then(json => {
+        this.setState({ surface: json });
+        this.setState({ surfaceLoaded: true });
       })
       .catch(err => {
-        this.setState({surfaceLoaded: true});
+        this.setState({ surfaceLoaded: true });
       });
   }
 

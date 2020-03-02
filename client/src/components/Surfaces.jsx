@@ -1,7 +1,7 @@
-import React              from 'react';
+import React from 'react';
 import urlToCurrentDomain from '../lib/urlToCurrentDomain';
-import {Link}             from '@reach/router';
-import * as Config        from '../config.json'
+import { Link } from '@reach/router';
+import * as Config from '../config.json'
 
 class Surfaces extends React.Component {
 
@@ -35,8 +35,14 @@ class Surfaces extends React.Component {
           <h1>All Surfaces in the database</h1>
           <ul>
             {this.state.surfaces.map(surface => (
-              <li key={`surface_${surface._id}`}><Link to={`/surface/${surface._id}`}>{surface.name}</Link></li>
-            ))}
+              <li
+                key={`surface_${surface._id}`}>
+                <img id="product-image" src={surface.img} alt="Product Image" />
+                <Link to={`/surface/${surface._id}`}>{surface.name}</Link>
+              </li>
+
+            ))
+            }
           </ul>
           <p><Link to='/add-surface'>Add a new Surface</Link></p>
         </div>
@@ -46,13 +52,13 @@ class Surfaces extends React.Component {
 
   componentDidMount() {
     fetch(urlToCurrentDomain(Config.surfacesAPI))
-      .then (res  => res.json())
-      .then (json => {
-        this.setState({surfaces       : json});
-        this.setState({surfacesLoaded : true});
+      .then(res => res.json())
+      .then(json => {
+        this.setState({ surfaces: json });
+        this.setState({ surfacesLoaded: true });
       })
       .catch(err => {
-        this.setState({surfacesLoaded: true});
+        this.setState({ surfacesLoaded: true });
       });
   }
 

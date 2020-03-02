@@ -37,7 +37,7 @@ class Accessories extends React.Component {
             {this.state.accessories.map(accessory => (
               <li
                 key={`accessory_${accessory._id}`}>
-                <img src={accessory.img} alt="Product Image" />
+                <img id="product-image" src={accessory.img} alt="Product Image" />
                 <Link to={`/accessory/${accessory._id}`}>{accessory.name}</Link>
               </li>
               
