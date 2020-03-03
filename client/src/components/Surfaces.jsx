@@ -32,19 +32,22 @@ class Surfaces extends React.Component {
     } else {
       return (
         <div>
-          <h1>All Surfaces in the database</h1>
+          <h1 id="product-list-header">Discover Microsoft Surface</h1>
           <ul>
             {this.state.surfaces.map(surface => (
               <li
                 key={`surface_${surface._id}`}>
                 <img id="product-image" src={surface.img} alt="Product Image" />
+                <span>
                 <Link to={`/surface/${surface._id}`}>{surface.name}</Link>
+                <p to={`/surface/${surface._id}`}>Memory: {surface.memory}</p>
+                </span>
               </li>
 
             ))
             }
           </ul>
-          <p><Link to='/add-surface'>Add a new Surface</Link></p>
+          <p><Link to='/surfaces/add-surface'>Add a new Surface</Link></p>
         </div>
       )
     }

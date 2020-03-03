@@ -32,33 +32,41 @@ class Surface extends React.Component {
       );
     } else {
       return (
-        <Row>
-          <div class="container-fluid">
-            <div className='card mb-4'>
-              <h2 className='card-header'>{this.state.surface.name}</h2>
-              <div className='row'>
+        <Row id="product-card">
+        <div class="container-fluid">
+          <div className='card mb-4'>
+            <h2 className='card-header'>{this.state.surface.name}</h2>
+            <div className='row'>
 
-                <div>
-                  <div className="product-image">
-                    <img id="product-image" src={this.state.surface.img} alt="Product Image" />
-                  </div>
+              <div className='col-12 col-md-3'>
+                <div className="product-image">
+                  <img src={this.state.surface.img} alt="Product Image" />
                 </div>
+              </div>
 
-                <div>
-                  <div className='card-body'>
-                    <h6 id='product-description' >Name: </h6>
-                    <p className='card-text'>{this.state.surface.name}</p>
-                    <h6 id='product-description' >Memory: </h6>
-                    <p className='card-text'>{this.state.surface.memory}</p>
-                    <h6 id='product-specification'>Colour: </h6>
-                    <p className='card-text'>{this.state.surface.colour}</p>
-                    <h6 id='product-specification'>Price: </h6>
-                    <p className='card-text'>{this.state.surface.price}</p>
-                    <Button href='/' variant="success">Back to All Surfaces</Button>
-                  </div>
+              <div className='col-12 col-md-9'>
+                <div className='card-body'>
+                  <h6 id='product-description' >Name: </h6>
+                  <p className='card-text'>{this.state.surface.name}</p>
+                  <h6 id='product-description' >Description: </h6>
+                  <p className='card-text'>{this.state.surface.description}</p>
+                  <h6 id='product-description' >Size: </h6>
+                  <p className='card-text'>{this.state.surface.size}</p>
+                  <h6 id='product-description' >Memory: </h6>
+                  <p className='card-text'>{this.state.surface.memory}</p>
+                  <h6 id='product-description' >Storage: </h6>
+                  <p className='card-text'>{this.state.surface.storage}</p>
+                  <h6 id='product-description' >CPU: </h6>
+                  <p className='card-text'>{this.state.surface.CPU}</p>
+                  <h6 id='product-specification'>Colour: </h6>
+                  <p className='card-text'>{this.state.surface.colour}</p>
+                  <h6 id='product-specification'>Price: </h6>
+                  <p className='card-text'>{this.state.surface.price}</p>
+                  <Button href='/surfaces' variant="success">Back to All Surfaces</Button>
                 </div>
               </div>
             </div>
+          </div>
           </div>
         </Row>
 

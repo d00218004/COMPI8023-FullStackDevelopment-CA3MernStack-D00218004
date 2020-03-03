@@ -28,7 +28,7 @@ class AddSurface extends React.Component {
           <h1>Error</h1>
           <p>Sorry, there was an error creating the Surface. The error was: {this.state.reportedError || 'Unknown'}</p>
           <a href='localhost:3000' onClick={this.resetForRetry.bind(this)}>Try again</a>&nbsp;|&nbsp;
-          <Link to='/'>Back to All Surfaces</Link>
+          <Link to='/surfaces'>Back to All Surfaces</Link>
         </div>
       );
     } else if (this.state.processingAdd) {
@@ -68,7 +68,7 @@ class AddSurface extends React.Component {
             </div>
 
           </form>
-          <Link to='/'>Back to All Surfaces</Link>
+          <Link to='/surfaces'>Back to All Surfaces</Link>
         </div>
       );
     }

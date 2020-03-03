@@ -1,0 +1,374 @@
+{
+	"info": {
+		"_postman_id": "4e7ef326-1444-430f-ba69-a038fceb9123",
+		"name": "products-db API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Surfaces",
+			"item": [
+				{
+					"name": "Get an array of Surfaces",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/surfaces",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"surfaces"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a single Surface (by ID)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/surfaces/5e4fb00832f6de5a426e9e22",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"surfaces",
+								"5e4fb00832f6de5a426e9e22"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add a Surface",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"hello\",\n\t\"memory\"     : \"hello\", \n\t\"colour\"   : \"hello\" ,\n\t\"price\"   : \"hello\" \t\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/surfaces",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"surfaces"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a single Surface (by ID)",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/surfaces/5e4fb00832f6de5a426e9e22",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"surfaces",
+								"5e4fb00832f6de5a426e9e22"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a single Surface (by ID)",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "        {\r\n        \t\"name\": \"Galaxy S20 Plus\",\r\n    \t\t\"memory\": \"64GB\",\r\n        \t\"colour\": \"Lilac\",\r\n        \t\"price\": \"999.99\"\r\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/surfaces/5e4fb00832f6de5a426e9e22",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"surfaces",
+								"5e4fb00832f6de5a426e9e22"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Accessories",
+			"item": [
+				{
+					"name": "Get an array of Accessories",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/accessories/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"accessories",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a single Accessory (by ID)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/accessories/5e53d544971a44e01a316085",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"accessories",
+								"5e53d544971a44e01a316085"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add an Accessory",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"img\": \"https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE3rhgV?ver=0e9d&w=498&h=408&q=90&m=6&b=%23FFF0F0F0&f=jpg&o=f&p=0&aim=true\",\n\t\"name\": \"hello\",\n\t\"description\"     : \"hello\", \n\t\"colour\"   : \"hello\" ,\n\t\"price\"   : \"hello\" \t\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/accessories/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"accessories",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a single Accessory (by ID)",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/accessories/5e53d544971a44e01a316085/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"accessories",
+								"5e53d544971a44e01a316085",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a single Accessory (by ID)",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"img\"\t\t\t: \"https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE3rhgV?ver=0e9d&w=498&h=408&q=90&m=6&b=%23FFF0F0F0&f=jpg&o=f&p=0&aim=true\",\r\n\t\"name\"\t\t\t: \"Surface Pro X Signature Keyboard with Slim Pen Bundle\",\r\n\t\"description\"\t: \"Next-level versatility comes in the perfect pair. Surface Slim Pen stores securely and recharges in the premium Surface Pro X Signature Keyboard with Slim Pen, featuring a large glass trackpad and luxurious, \t\t\t\t\t  Alcantara® material covering. Surface Pro X Signature Keyboard with Slim Pen is compatible with Surface Pro X only.\",\r\n\t\"colour\"\t\t: \"Purple\",\r\n\t\"price\" \t\t: \"259.99\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/accessories/5e53d544971a44e01a316085",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"accessories",
+								"5e53d544971a44e01a316085"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

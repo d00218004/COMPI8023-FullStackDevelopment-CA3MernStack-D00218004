@@ -17,7 +17,7 @@ class Slider extends React.Component {
           />
           <Carousel.Caption>
             <h3>Surface Laptop 3</h3>
-            <Button variant="dark">Shop the Surface Range - Starting from €999.99</Button>
+            <Button href="./surfaces/" variant="dark">Shop the Surface Range - Starting from €999.99</Button>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>

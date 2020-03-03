@@ -9,23 +9,31 @@ import Accessory from './Accessory';
 import '../scss/main.css';
 import Navmenu from './NavigationBar';
 import Slider from './Slider';
-
+import VideoGallery from './VideoGallery';
+import Footer from './Footer';
 class App extends React.Component {
 
   render() {
     return (
       <div>
         <Navmenu />
-        <Slider />
         <Router>
-          <Surfaces path='/' />
+        <Slider path='/' />
+
+        </Router>
+        <Router>
+          <VideoGallery path='/' />
+
+          <Surfaces path='/surfaces' />
           <Surface path='/surface/:surfaceID' />
-          <AddSurface path='/add-surface/' />
+          <AddSurface path='/surfaces/add-surface/' />
 
           <Accessories path='/accessories' />
           <Accessory path='/accessory/:accessoryID' />
           <AddAccessory path='/accessories/add-accessory/' />
         </Router>
+        <Footer />
+
       </div>
     );
   }

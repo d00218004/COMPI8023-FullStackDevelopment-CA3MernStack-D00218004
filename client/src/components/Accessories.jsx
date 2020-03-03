@@ -32,7 +32,7 @@ class Accessories extends React.Component {
     } else {
       return (
         <div>
-          <h1>All Accessories in the database</h1>
+          <h1 id="product-list-header">Accessories</h1>
           <ul>
             {this.state.accessories.map(accessory => (
               <li
