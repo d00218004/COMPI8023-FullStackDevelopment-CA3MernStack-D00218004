@@ -10,10 +10,15 @@ class AddSurface extends React.Component {
   // #######################################################
 
   state = {
-    name     : '',
-    memory     : '',
-    colour     : '',
-    price     : ''
+    img         : '',
+    name        : '',
+    description : '',
+    size        : '',
+    colour      : '',
+    memory      : '',
+    storage     : '',
+    CPU         : '',
+    price       : ''
   }
 
   // #######################################################
@@ -42,16 +47,31 @@ class AddSurface extends React.Component {
           <form onSubmit={this.handleSubmit.bind(this)}>
 
             <div>
-              <label>Surface Name:
+              <label>Image ( URL ):
+                <input type='' value={this.state.Img} onChange={this.handleImgUpdate.bind(this)} />
+              </label>
+              <label>Name:
                 <input type='' value={this.state.name} onChange={this.handleNameUpdate.bind(this)} />
               </label>
-              <label>Surface Memory:
-                <input type='' value={this.state.memory} onChange={this.handleMemoryUpdate.bind(this)} />
+              <label>Description:
+                <input type='' value={this.state.description} onChange={this.handleDescriptionUpdate.bind(this)} />
               </label>
-              <label>Surface Colour:
+              <label>Size:
+                <input type='' value={this.state.size} onChange={this.handleSizeUpdate.bind(this)} />
+              </label>
+              <label>Colour:
                 <input type='' value={this.state.colour} onChange={this.handleColourUpdate.bind(this)} />
               </label>
-              <label>Surface Price:
+              <label>Memory:
+                <input type='' value={this.state.memory} onChange={this.handleMemoryUpdate.bind(this)} />
+              </label>
+              <label>Storage:
+                <input type='' value={this.state.storage} onChange={this.handleStorageUpdate.bind(this)} />
+              </label>
+              <label>CPU:
+                <input type='' value={this.state.CPU} onChange={this.handleCPUUpdate.bind(this)} />
+              </label>
+              <label>Price:
                 <input type='' value={this.state.price} onChange={this.handlePriceUpdate.bind(this)} />
               </label>
             </div>
@@ -74,14 +94,29 @@ class AddSurface extends React.Component {
     }
   }
 
+  handleImgUpdate(e) {
+    this.setState({img: e.target.value || null});
+  }
   handleNameUpdate(e) {
     this.setState({name: e.target.value || null});
+  }
+  handleDescriptionUpdate(e) {
+    this.setState({description: e.target.value || null});
+  }
+  handleSizeUpdate(e) {
+    this.setState({size: e.target.value || null});
+  }
+  handleColourUpdate(e) {
+    this.setState({colour: e.target.value || null});
   }
   handleMemoryUpdate(e) {
     this.setState({memory: e.target.value || null});
   }
-  handleColourUpdate(e) {
-    this.setState({colour: e.target.value || null});
+  handleStorageUpdate(e) {
+    this.setState({storage: e.target.value || null});
+  }
+  handleCPUUpdate(e) {
+    this.setState({CPU: e.target.value || null});
   }
   handlePriceUpdate(e) {
     this.setState({price: e.target.value || null});
@@ -103,10 +138,15 @@ class AddSurface extends React.Component {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        name      : this.state.name,
-        memory    : this.state.memory,
-        colour    : this.state.colour,
-        price     : this.state.price
+        img         : this.state.img,
+        name        : this.state.name,
+        description : this.state.description,
+        size        : this.state.size,
+        colour      : this.state.colour,
+        memory      : this.state.memory,
+        storage     : this.state.storage,
+        CPU         : this.state.CPU,
+        price       : this.state.price
       })}
     )
       .then (res  => {

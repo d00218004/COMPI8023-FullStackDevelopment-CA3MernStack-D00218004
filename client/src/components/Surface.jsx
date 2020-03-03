@@ -52,15 +52,15 @@ class Surface extends React.Component {
                   <p className='card-text'>{this.state.surface.description}</p>
                   <h6 id='product-description' >Size: </h6>
                   <p className='card-text'>{this.state.surface.size}</p>
+                  <h6 id='product-specification'>Colour: </h6>
+                  <p className='card-text'>{this.state.surface.colour}</p>
                   <h6 id='product-description' >Memory: </h6>
                   <p className='card-text'>{this.state.surface.memory}</p>
                   <h6 id='product-description' >Storage: </h6>
                   <p className='card-text'>{this.state.surface.storage}</p>
                   <h6 id='product-description' >CPU: </h6>
                   <p className='card-text'>{this.state.surface.CPU}</p>
-                  <h6 id='product-specification'>Colour: </h6>
-                  <p className='card-text'>{this.state.surface.colour}</p>
-                  <h6 id='product-specification'>Price: </h6>
+                  <h6 id='product-specification'>Price: €</h6>
                   <p className='card-text'>{this.state.surface.price}</p>
                   <Button href='/surfaces' variant="success">Back to All Surfaces</Button>
                 </div>
