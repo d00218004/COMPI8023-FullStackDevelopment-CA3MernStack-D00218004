@@ -1,15 +1,24 @@
 #footer-text
 {
-    text-align: center;
+    text-align      : center;
 }
 
 #footer-text-bottom
 {
-    text-align: center;
+    text-align      : center;
 }
 
 #footer
 {
     margin-bottom   : 0 !important;
     margin-top      : 10px;
+}
+
+#footer-logo
+{
+    display         : block;
+    margin-left     : auto;
+    margin-right    : auto;
+    width           : 10%;
+    padding-top     : 20px;
 }

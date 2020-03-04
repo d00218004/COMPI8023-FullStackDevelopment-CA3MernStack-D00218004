@@ -10,10 +10,11 @@ class AddAccessory extends React.Component {
   // #######################################################
 
   state = {
-    name     : '',
-    description     : '',
-    colour     : '',
-    price     : ''
+    img         : '',
+    name        : '',
+    description : '',
+    colour      : '',
+    price       : ''
   }
 
   // #######################################################
@@ -27,8 +28,8 @@ class AddAccessory extends React.Component {
         <div>
           <h1>Error</h1>
           <p>Sorry, there was an error creating the Accessory. The error was: {this.state.reportedError || 'Unknown'}</p>
-          <a href='localhost:3000/accessories' onClick={this.resetForRetry.bind(this)}>Try again</a>&nbsp;|&nbsp;
-          <Link to='/accessories/'>Back to All Accessories</Link>
+          <a href='localhost:3000' onClick={this.resetForRetry.bind(this)}>Try again</a>&nbsp;|&nbsp;
+          <Link to='/accessories'>Back to All Accessory</Link>
         </div>
       );
     } else if (this.state.processingAdd) {
@@ -42,16 +43,19 @@ class AddAccessory extends React.Component {
           <form onSubmit={this.handleSubmit.bind(this)}>
 
             <div>
-              <label>Accessory Name:
+              <label>Image ( URL ):
+                <input type='' value={this.state.Img} onChange={this.handleImgUpdate.bind(this)} />
+              </label>
+              <label>Name:
                 <input type='' value={this.state.name} onChange={this.handleNameUpdate.bind(this)} />
               </label>
-              <label>Accessory Description:
+              <label>Description:
                 <input type='' value={this.state.description} onChange={this.handleDescriptionUpdate.bind(this)} />
               </label>
-              <label>Accessory Colour:
+              <label>Colour:
                 <input type='' value={this.state.colour} onChange={this.handleColourUpdate.bind(this)} />
               </label>
-              <label>Accessory Price:
+              <label>Price:
                 <input type='' value={this.state.price} onChange={this.handlePriceUpdate.bind(this)} />
               </label>
             </div>
@@ -68,12 +72,13 @@ class AddAccessory extends React.Component {
             </div>
 
           </form>
-          <Link to='/accessories'>Back to all Accessories</Link>
+          <Link to='/accessories'>Back to All Accessories</Link>
         </div>
       );
     }
   }
-  handleImageUpdate(e) {
+
+  handleImgUpdate(e) {
     this.setState({img: e.target.value || null});
   }
   handleNameUpdate(e) {
@@ -105,11 +110,11 @@ class AddAccessory extends React.Component {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        img      : this.state.img,
-        name      : this.state.name,
-        description    : this.state.description,
-        colour    : this.state.colour,
-        price     : this.state.price
+        img         : this.state.img,
+        name        : this.state.name,
+        description : this.state.description,
+        colour      : this.state.colour,
+        price       : this.state.price
       })}
     )
       .then (res  => {

@@ -5,27 +5,33 @@ div.product-image img {
 
 #product-description
   {
-    color: rgb(0, 162, 255);
+    color       : rgb(0, 162, 255);
   }
 
   #product-specification
   {
-    color: rgb(0, 162, 255);
+    color       : rgb(0, 162, 255);
   }
 
 #product-image
   {
-    width     : 500px;
-    height    : auto;
+    width       : 500px;
+    height      : auto;
   }
+
+  div.product-image img
+  {
+    width       : 500px;
+    height      : auto;
+}
 
   #product-card
   {
-    margin-top: 50px;
+    margin-top  : 50px;
   }
   
   #product-list-header
   {
-    margin: 40px;
-    text-align: center;
+    margin      : 40px;
+    text-align  : center;
   }

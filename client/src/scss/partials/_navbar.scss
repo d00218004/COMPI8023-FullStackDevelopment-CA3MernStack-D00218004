@@ -1,36 +1,36 @@
 .bg-dark
 {
-    background-color: white !important;
+    background-color    : white !important;
 }
 
 #logo
 {
-    height: 20px;
-    width: auto;
+    height  : 20px;
+    width   : auto;
 }
 
 .navbar-dark .navbar-nav .nav-link
 {
-    color: grey;
+    color   : grey;
 }
 
 .navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover {
-    color: grey !important;
+    color   : grey !important;
 }
 
 .navbar-nav .dropdown-menu {
-    position: static;
-    float: none;
-    margin-top: 10px;
+    position    : static;
+    float       : none;
+    margin-top  : 10px;
 }
 
 span
 {
-    padding: none!important;
-    margin: none!important;
-    border:none!important;
-    height: 40px!important;
-    vertical-align: middle!important;
-    line-height: 40px!important;
-    width: 150px!important;
+    padding         : none!important;
+    margin          : none!important;
+    border          :none!important;
+    height          : 40px!important;
+    vertical-align  : middle!important;
+    line-height     : 40px!important;
+    width           : 150px!important;
 }

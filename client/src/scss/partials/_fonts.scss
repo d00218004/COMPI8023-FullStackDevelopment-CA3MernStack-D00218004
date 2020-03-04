@@ -1,18 +1,19 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700,900&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Nunito:700&display=swap');
+
 body
 {
   //font-family: 'Roboto';
-  color: Black;
-  font-family: 'Nunito';
-  text-shadow: 4px 4px 4px #aaa;
+  color       : Black;
+  font-family : 'Nunito';
+  text-shadow : 4px 4px 4px #aaa;
 }
 
 /*h2, h6*/ h1, h2, h3, h4, h5, h6
 {
   //font-family: 'Roboto Slab';
-  color: Black;
+  color       : Black;
   //font-family : 'Nunito:700';
-  text-shadow: 4px 4px 4px #aaa;
+  text-shadow : 4px 4px 4px #aaa;
 }

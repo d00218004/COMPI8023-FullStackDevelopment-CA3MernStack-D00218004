@@ -39,10 +39,15 @@ router.get('/:id([0-9a-fA-F]{24})', (req, res) => {
 // POST Create a new Surface
 router.post('/', (req, res) => {
   return new Surface({
-    name     : req.body.name,
-    memory    : req.body.memory,
-    colour    : req.body.colour,
-    price    : req.body.price,
+    img     : req.body.img,
+    name    : req.body.name,
+    description    : req.body.description,
+    size    : req.body.size,
+    colour  : req.body.colour,
+    memory  : req.body.memory,
+    storage : req.body.storage,
+    CPU     : req.body.CPU,
+    price   : req.body.price,
   })
   .save()
   .then (surface => Surface.populate(surface, {path: '_id'}))
@@ -70,10 +75,15 @@ router.put('/:id([0-9a-fA-F]{24})', (req, res) => {
     .findOneAndUpdate(
       {_id: req.params.id},
       {$set: {
-        name     : req.body.name,
-        memory     : req.body.memory,
-        colour     : req.body.colour,
-        price     : req.body.price,
+        img     : req.body.img,
+        name    : req.body.name,
+        description    : req.body.description,
+        size    : req.body.size,
+        colour  : req.body.colour,
+        memory  : req.body.memory,
+        storage : req.body.storage,
+        CPU     : req.body.CPU,
+        price   : req.body.price,
       }},
       {new: true}
     )

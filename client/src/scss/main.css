@@ -47,6 +47,14 @@ span {
   margin-top: 10px;
 }
 
+#footer-logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 10%;
+  padding-top: 20px;
+}
+
 body {
   color: Black;
   font-family: 'Nunito';
@@ -77,6 +85,11 @@ div.product-image img {
   height: auto;
 }
 
+div.product-image img {
+  width: 500px;
+  height: auto;
+}
+
 #product-card {
   margin-top: 50px;
 }
@@ -102,5 +115,21 @@ div.product-image img {
 #video-gallery-header {
   text-align: center;
   padding-top: 50px;
+}
+
+#slider-header {
+  color: white;
+  font-size: 40px;
+  padding-bottom: 20px;
+}
+
+.btn-dark {
+  color: #fff;
+  background-color: grey;
+  border-color: grey;
+}
+
+.btn-dark a {
+  color: black !important;
 }
 /*# sourceMappingURL=main.css.map */
