@@ -17,7 +17,7 @@ class Accessories extends React.Component {
 
   render() {
 
-    if (!this.state.accessories && this.state.accessoryLoaded === true) {
+    if (!this.state.accessories && this.state.accessoriesLoaded === true) {
       return (
         <p>Error loading Accessories. Try again later.</p>
       );
@@ -38,12 +38,9 @@ class Accessories extends React.Component {
               <li
                 key={`accessory_${accessory._id}`}>
                 <img id="product-image" src={accessory.img} alt="Product Image" />
-                <span>
                 <Link to={`/accessory/${accessory._id}`}>{accessory.name}</Link>
-                <p to={`/accessory/${accessory._id}`}>Description: {accessory.description}</p>
-                </span>
               </li>
-
+              
             ))
             }
           </ul>
@@ -68,4 +65,3 @@ class Accessories extends React.Component {
 }
 
 export default Accessories;
-
