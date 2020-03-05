@@ -3,7 +3,7 @@ import urlToCurrentDomain from '../lib/urlToCurrentDomain';
 import { Link } from '@reach/router';
 import * as Config from '../config.json'
 import { GridList } from '@material-ui/core';
-import { GridListTile, classes } from '@material-ui/core';
+import { GridListTile } from '@material-ui/core';
 import Row from 'react-bootstrap/Row';
 import Card from 'react-bootstrap/Card';
 import accessory from './images-resized/shop-accessories-slider.jpg';

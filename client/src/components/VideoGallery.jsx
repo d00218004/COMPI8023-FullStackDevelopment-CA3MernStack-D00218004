@@ -1,10 +1,10 @@
 import React from 'react';
-import { Card, CardDeck, Container } from 'react-bootstrap';
+import { Card, CardDeck } from 'react-bootstrap';
 
 class VideoGallery extends React.Component {
     render() {
         return (
-            <Container-fluid>
+            <div>
                 <h2 id="video-gallery-header">Meet the Latest Releases</h2>
                 <CardDeck>
                     <Card>
@@ -45,7 +45,7 @@ class VideoGallery extends React.Component {
                         </Card.Footer>
                     </Card>
                 </CardDeck>
-            </Container-fluid>
+            </div>
         );
     }
 }

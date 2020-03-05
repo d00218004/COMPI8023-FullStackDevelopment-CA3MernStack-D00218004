@@ -41,6 +41,22 @@ span {
   width: 150px !important;
 }
 
+#cart {
+  color: white;
+  margin: none;
+  padding-right: 50px;
+}
+
+#cart p {
+  margin: 10px;
+}
+
+#shopping-cart {
+  height: 25px !important;
+  padding-right: 10px !important;
+  margin-right: 00px !important;
+}
+
 #footer-text {
   text-align: center;
 }

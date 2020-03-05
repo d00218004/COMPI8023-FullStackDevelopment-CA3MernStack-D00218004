@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from '@reach/router';
 import urlToCurrentDomain from '../lib/urlToCurrentDomain';
 import * as Config from '../config.json'
 import Row from 'react-bootstrap/Row';
@@ -39,7 +38,7 @@ class Surface extends React.Component {
               <div className='row'>
                 <div className='col-12 col-md-3'>
                   <div className="product-image">
-                    <img id="product-image" src={this.state.surface.img} alt="Product Image" />
+                    <img id="product-image" src={this.state.surface.img} alt="Product Img" />
                   </div>
                 </div>
                 <div className='col-12 col-md-9'>
