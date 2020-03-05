@@ -17,28 +17,22 @@ class App extends React.Component {
     return (
       <div>
         <Navmenu />
-
         <Router>
           <Slider path='/' />
         </Router>
-
         <Router>
           <VideoGallery path='/' />
           <Surfaces path='/surfaces' />
           <Surface path='/surface/:surfaceID' />
           <AddSurface path='/surfaces/add-surface/' />
-
           <Accessories path='/accessories' />
           <Accessory path='/accessory/:accessoryID' />
           <AddAccessory path='/accessories/add-accessory/' />
         </Router>
-        
         <Footer />
-
       </div>
     );
   }
-
 }
 
 export default App;

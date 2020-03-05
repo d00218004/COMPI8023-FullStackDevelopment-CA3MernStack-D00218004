@@ -37,13 +37,11 @@ class Surface extends React.Component {
             <div className='card mb-4'>
               <h2 className='card-header'>{this.state.surface.name}</h2>
               <div className='row'>
-
                 <div className='col-12 col-md-3'>
                   <div className="product-image">
-                    <img src={this.state.surface.img} alt="Product Image" />
+                    <img id="product-image" src={this.state.surface.img} alt="Product Image" />
                   </div>
                 </div>
-
                 <div className='col-12 col-md-9'>
                   <div className='card-body'>
                     <h6 id='product-description' >Name: </h6>
@@ -69,7 +67,6 @@ class Surface extends React.Component {
             </div>
           </div>
         </Row>
-
       )
     }
   }

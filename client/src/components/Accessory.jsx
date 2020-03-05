@@ -40,7 +40,7 @@ class Accessory extends React.Component {
 
                 <div className='col-12 col-md-3'>
                   <div className="product-image">
-                    <img src={this.state.accessory.img} alt="Product Image" />
+                    <img id="product-image" src={this.state.accessory.img} alt="Product Image" />
                   </div>
                 </div>
 
