@@ -2,7 +2,12 @@ import React from 'react';
 import urlToCurrentDomain from '../lib/urlToCurrentDomain';
 import { Link } from '@reach/router';
 import * as Config from '../config.json'
-
+import { GridList } from '@material-ui/core';
+import { GridListTile, classes } from '@material-ui/core';
+import Row from 'react-bootstrap/Row';
+import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
+import surface from './images/shop-surface-slider.jpg';
 class Accessories extends React.Component {
 
   // #######################################################
@@ -32,6 +37,42 @@ class Accessories extends React.Component {
     } else {
       return (
         <div>
+          <Card className="bg-dark text-white">
+            <Card.Img img src={surface} alt="Shop Surface" />
+            <Card.ImgOverlay>
+              <Card.Title id="shop-surface">Explore the</Card.Title>
+              <Card.Title id="shop-surface">Accessories Range</Card.Title>
+              <Card.Text>
+                Specifically Designed for Surface, Why Not Add An Accessory Or Two. Stand Out with the Newest Surface Computers & Accesories.
+              </Card.Text>
+            </Card.ImgOverlay>
+          </Card>
+
+          <GridList cellHeight={500} className={GridList.gridList} cols={4}>
+          {this.state.accessories.map(accessory => (
+              <GridListTile key={`accessory_${accessory._id}`}>> cols={accessory.cols || 1}>
+                <Row id="product-card">
+                  <div class="container-fluid">
+                    <div className='card mb-4'>
+                      <center>
+                        <img id="product-list-image" src={accessory.img} alt="Product Image" />
+                      </center>
+                      <Link to={`/accessory/${accessory._id}`} id="product-list-title" >{accessory.name}</Link>
+                      <p id="product-list-description" to={`/accessory/${accessory._id}`} className='card-text' >Colour: {accessory.colour}</p>
+                    </div>
+                  </div>
+                </Row>
+              </GridListTile>
+            ))}
+          </GridList>
+
+          <p><Link to='/accessories/add-accessory'>Add a new Accessory</Link></p>
+        </div>
+
+
+
+        /*
+        <div>
           <h1 id="product-list-header">Accessories</h1>
           <ul>
             {this.state.accessories.map(accessory => (
@@ -46,6 +87,7 @@ class Accessories extends React.Component {
           </ul>
           <p><Link to='/accessories/add-accessory'>Add a new Accessory</Link></p>
         </div>
+        */
       )
     }
   }
