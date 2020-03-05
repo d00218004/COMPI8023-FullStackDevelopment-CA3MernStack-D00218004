@@ -36,6 +36,18 @@ router.get('/:id([0-9a-fA-F]{24})', (req, res) => {
     );
 });
 
+  // GET a single Accessory by result
+  router.get('/accessory/:id [object%20Object]', (req, res) => {
+    return mongoose
+      .model('Accessory')
+      .findOne({_id: req.params.id})
+      .then (accessory => res.json(accessory))
+      .catch(err => res
+        .status(500)
+        .json({ok: false})
+      );
+  });
+
 // POST Create a new Accessory
 router.post('/', (req, res) => {
   return new Accessory({

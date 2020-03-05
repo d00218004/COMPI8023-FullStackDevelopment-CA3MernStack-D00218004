@@ -17,13 +17,13 @@ class App extends React.Component {
     return (
       <div>
         <Navmenu />
-        <Router>
-        <Slider path='/' />
 
+        <Router>
+          <Slider path='/' />
         </Router>
+
         <Router>
           <VideoGallery path='/' />
-
           <Surfaces path='/surfaces' />
           <Surface path='/surface/:surfaceID' />
           <AddSurface path='/surfaces/add-surface/' />
@@ -32,6 +32,7 @@ class App extends React.Component {
           <Accessory path='/accessory/:accessoryID' />
           <AddAccessory path='/accessories/add-accessory/' />
         </Router>
+        
         <Footer />
 
       </div>

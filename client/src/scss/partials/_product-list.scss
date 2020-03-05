@@ -1,0 +1,35 @@
+#product-list-image
+{
+  padding: 10px;
+  width: auto;
+  height: 300px;
+  display: block !important;
+  text-align: center !important;
+}
+
+li.MuiGridListTile-root
+{
+  height: 400px !important;
+  padding: 10px !important;
+}
+
+#product-list-title
+{
+  font-size   : 30px;
+  text-align  : center !important;
+  color       : darkslategray;
+  font-weight : 500;
+}
+
+#product-list-description
+{
+  text-align  : center !important;
+  color       : darkslategray;
+  font-weight : 300;
+}
+
+#shop-surface
+{
+  font-size: 80px;
+  font-weight: 700;
+}

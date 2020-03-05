@@ -1,7 +1,13 @@
 import React from 'react';
 import urlToCurrentDomain from '../lib/urlToCurrentDomain';
 import { Link } from '@reach/router';
-import * as Config from '../config.json'
+import * as Config from '../config.json';
+import { GridList } from '@material-ui/core';
+import { GridListTile, classes } from '@material-ui/core';
+import Row from 'react-bootstrap/Row';
+import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
+import surface from './images/shop-surface-slider.jpg';
 
 class Surfaces extends React.Component {
 
@@ -32,21 +38,35 @@ class Surfaces extends React.Component {
     } else {
       return (
         <div>
-          <h1 id="product-list-header">Discover Microsoft Surface</h1>
-          <ul>
-            {this.state.surfaces.map(surface => (
-              <li
-                key={`surface_${surface._id}`}>
-                <img id="product-image" src={surface.img} alt="Product Image" />
-                <span>
-                <Link to={`/surface/${surface._id}`}>{surface.name}</Link>
-                <p to={`/surface/${surface._id}`}>Memory: {surface.memory}</p>
-                </span>
-              </li>
+          <Card className="bg-dark text-white">
+            <Card.Img img src={surface} alt="Shop Surface" />
+            <Card.ImgOverlay>
+              <Card.Title id="shop-surface">Shop the</Card.Title>
+              <Card.Title id="shop-surface">Surface Range</Card.Title>
+              <Card.Text>
+                Explore Versatile Laptop Designs & Stand Out with the Newest Surface Computers.
+              </Card.Text>
+            </Card.ImgOverlay>
+          </Card>
 
-            ))
-            }
-          </ul>
+          <GridList cellHeight={500} className={GridList.gridList} cols={4}>
+            {this.state.surfaces.map(surface => (
+              <GridListTile key={`surface_${surface._id}`}> cols={surface.cols || 1}>
+                <Row id="product-card">
+                  <div class="container-fluid">
+                    <div className='card mb-4'>
+                      <center>
+                        <img id="product-list-image" src={surface.img} alt="Product Image" />
+                      </center>
+                      <Link to={`/surface/${surface._id}`} id="product-list-title" >{surface.name}</Link>
+                      <p id="product-list-description" to={`/surface/${surface._id}`} className='card-text' >Storage: {surface.memory} | Memory: {surface.memory}</p>
+                    </div>
+                  </div>
+                </Row>
+              </GridListTile>
+            ))}
+          </GridList>
+
           <p><Link to='/surfaces/add-surface'>Add a new Surface</Link></p>
         </div>
       )
