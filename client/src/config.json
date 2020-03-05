@@ -1,5 +1,6 @@
 {
   "defaultImage" : "https://www.dkit.ie/assets/uploads/DkIT%20Turbine%201.jpg",
   "accessoriesAPI" : ":3000/accessories",
-  "surfacesAPI": ":3000/surfaces"
+  "surfacesAPI": ":3000/surfaces",
+  "consolesAPI": ":3000/consoles"
 }

@@ -12,8 +12,9 @@ class Navmenu extends React.Component {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="mr-auto">
-                        <Nav.Link href="/surfaces">Surfaces</Nav.Link>
+                        <Nav.Link href="../../surfaces">Surfaces</Nav.Link>
                         <Nav.Link href="../../accessories">Accessories</Nav.Link>
+                        <Nav.Link href="../../consoles">Consoles</Nav.Link>
                         <NavDropdown title="Discover the Surface Range" id="collasible-nav-dropdown">
                             <NavDropdown.Item href="https://www.microsoft.com/en-gb/p/surface-pro-7/8n17j0m5zzqs">Surface Pro 7</NavDropdown.Item>
                             <NavDropdown.Item href="https://www.microsoft.com/en-gb/p/surface-pro-x/8vdnrp2m6hhc">Surface Pro X</NavDropdown.Item>

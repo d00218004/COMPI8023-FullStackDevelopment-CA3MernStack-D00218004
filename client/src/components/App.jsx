@@ -1,11 +1,14 @@
 import React from 'react';
 import { Router } from "@reach/router";
-import Surfaces from './Surfaces';
 import Surface from './Surface';
+import Surfaces from './Surfaces';
 import AddSurface from './AddSurface';
+import Accessory from './Accessory';
 import Accessories from './Accessories';
 import AddAccessory from './AddAccessory';
-import Accessory from './Accessory';
+import Console from './Console';
+import Consoles from './Consoles';
+import AddConsole from './AddConsole';
 import '../scss/main.css';
 import Navmenu from './NavigationBar';
 import Slider from './Slider';
@@ -28,6 +31,9 @@ class App extends React.Component {
           <Accessories path='/accessories' />
           <Accessory path='/accessory/:accessoryID' />
           <AddAccessory path='/accessories/add-accessory/' />
+          <Consoles path='/consoles' />
+          <Console path='/console/:consoleID' />
+          <AddConsole path='/consoles/add-console/' />
         </Router>
         <Footer />
       </div>

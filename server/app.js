@@ -4,6 +4,7 @@ const cookieParser   = require('cookie-parser');
 const logger         = require('morgan');
 const surfacesRouter    = require('./routes/surfaces');
 const accessoriesRouter    = require('./routes/accessories');
+const consolesRouter    = require('./routes/consoles');
 const app            = express();
 const mongoose       = require('mongoose');
 const config         = require('./config.json');
@@ -40,6 +41,7 @@ app.use(function(req, res, next) {
 //app.use('/topics',   topicsRouter);
 app.use('/surfaces', surfacesRouter);
 app.use('/accessories', accessoriesRouter);
+app.use('/consoles', consolesRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
