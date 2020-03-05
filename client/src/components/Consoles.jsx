@@ -6,7 +6,7 @@ import { GridList } from '@material-ui/core';
 import { GridListTile, classes } from '@material-ui/core';
 import Row from 'react-bootstrap/Row';
 import Card from 'react-bootstrap/Card';
-import surface from './images/shop-surface-slider.jpg';
+import console from './images/shop-xbox-slider.jpg';
 
 class Consoles extends React.Component {
 
@@ -38,11 +38,12 @@ class Consoles extends React.Component {
       return (
         <div>
           <Card className="bg-dark text-white">
-            <Card.Img img src={surface} alt="Shop Consoles" />
+            <Card.Img img src={console} alt="Shop Consoles" />
             <Card.ImgOverlay>
-              <Card.Title id="shop-surface">Shop the</Card.Title>
-              <Card.Title id="shop-surface">Console Range</Card.Title>
-              <Card.Text>
+            <br></br><br></br><br></br><br></br><br></br><br></br>
+              <Card.Title id="shop-console">Shop the</Card.Title>
+              <Card.Title id="shop-console">Console Range</Card.Title>
+              <Card.Text id="shop-console-description">
                 Explore Versatile Laptop Designs & Stand Out with the Newest Surface Computers.
               </Card.Text>
             </Card.ImgOverlay>

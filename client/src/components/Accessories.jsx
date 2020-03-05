@@ -6,8 +6,7 @@ import { GridList } from '@material-ui/core';
 import { GridListTile, classes } from '@material-ui/core';
 import Row from 'react-bootstrap/Row';
 import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
-import surface from './images/shop-surface-slider.jpg';
+import accessory from './images-resized/shop-accessories-slider.jpg';
 class Accessories extends React.Component {
 
   // #######################################################
@@ -38,10 +37,11 @@ class Accessories extends React.Component {
       return (
         <div>
           <Card className="bg-dark text-white">
-            <Card.Img img src={surface} alt="Shop Surface" />
+            <Card.Img img src={accessory} alt="Shop Accessory" />
             <Card.ImgOverlay>
-              <Card.Title id="shop-surface">Explore the</Card.Title>
-              <Card.Title id="shop-surface">Accessories Range</Card.Title>
+            <br></br><br></br><br></br><br></br><br></br><br></br>
+              <Card.Title id="shop-surface">Shop all</Card.Title>
+              <Card.Title id="shop-surface">Accessories</Card.Title>
               <Card.Text>
                 Specifically Designed for Surface, Why Not Add An Accessory Or Two. Stand Out with the Newest Surface Computers & Accesories.
               </Card.Text>

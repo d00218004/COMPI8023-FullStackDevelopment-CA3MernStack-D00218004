@@ -51,7 +51,7 @@ span {
 
 #footer {
   margin-bottom: 0 !important;
-  margin-top: 10px;
+  width: 100%;
 }
 
 #footer-logo {
@@ -142,7 +142,7 @@ li.MuiGridListTile-root {
   font-size: 20px;
   text-align: center !important;
   color: darkslategray;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 #product-list-description {
@@ -154,5 +154,17 @@ li.MuiGridListTile-root {
 #shop-surface {
   font-size: 80px;
   font-weight: 700;
+}
+
+#shop-console {
+  font-size: 80px;
+  font-weight: 700;
+  padding-left: 400px;
+  text-align: right;
+}
+
+#shop-console-description {
+  padding-top: 80px;
+  text-align: right;
 }
 /*# sourceMappingURL=main.css.map */

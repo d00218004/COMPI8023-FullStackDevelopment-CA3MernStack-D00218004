@@ -41,6 +41,7 @@ class Surfaces extends React.Component {
           <Card className="bg-dark text-white">
             <Card.Img img src={surface} alt="Shop Surface" />
             <Card.ImgOverlay>
+            <br></br><br></br><br></br><br></br><br></br><br></br>
               <Card.Title id="shop-surface">Shop the</Card.Title>
               <Card.Title id="shop-surface">Surface Range</Card.Title>
               <Card.Text>
@@ -59,7 +60,7 @@ class Surfaces extends React.Component {
                         <img id="product-list-image" src={surface.img} alt="Product Image" />
                       </center>
                       <Link to={`/surface/${surface._id}`} id="product-list-title" >{surface.name}</Link>
-                      <p id="product-list-description" to={`/surface/${surface._id}`} className='card-text' >Storage: {surface.memory} | Memory: {surface.memory}</p>
+                      <p id="product-list-description" to={`/surface/${surface._id}`} className='card-text' >Storage: {surface.storage} | Memory: {surface.memory}</p>
                     </div>
                   </div>
                 </Row>
