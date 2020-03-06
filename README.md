@@ -11,10 +11,12 @@ Before editing this project, be sure to have basic understanding of JavaScript, 
 
 To run the Server Side of the React Website, Open the Terminal within VS Code, and enter the following commands:
 > cd server
+
 > npm start
 
 To run the Server Side of the React Website, Open the Terminal within VS Code, and enter the following commands:
 > cd client
+
 > npm start
 
 Copyright - All Rights Reserved 2020
