@@ -52,7 +52,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/surfaces/5e4fb00832f6de5a426e9e22",
+							"raw": "http://localhost:3000/surfaces/5e5d17eecae4600bc41311c9",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -60,7 +60,7 @@
 							"port": "3000",
 							"path": [
 								"surfaces",
-								"5e4fb00832f6de5a426e9e22"
+								"5e5d17eecae4600bc41311c9"
 							]
 						}
 					},
@@ -80,7 +80,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"name\": \"hello\",\n\t\"memory\"     : \"hello\", \n\t\"colour\"   : \"hello\" ,\n\t\"price\"   : \"hello\" \t\n}",
+							"raw": "{\r\n\t\"img\" \t\t\t: \"https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE3oYaL?ver=ccfc&q=90&m=6&h=423&w=752&b=%23FFFFFFFF&o=f&aim=true\",\r\n    \"name\" \t\t\t: \"Surface Pro X\",\r\n\t\"description\" \t: \"Built for web-first experiences, Surface Pro X is ultra-thin and always connected, combining blazing-fast LTE with 2-in-1 versatility and edge-to-edge, ultra-slim 13” touchscreen. Surface Pro X                 Keyboard (including rechargeable Slim Pen) sold separately. Wherever the day takes you, be ready for anything with Surface Pro X. Featuring blazing-fast LTE connectivity,3 our thinnest Surface \t\t\t\t   stands out with two USB-C® ports and a stunning, virtually edge-to-edge 13” touchscreen.\",\r\n    \"colour\" \t\t: \"Black\",\r\n\t\"memory\" \t\t: \"8GB\",\r\n\t\"storage\"\t\t: \"64GB\",\r\n\t\"price\" \t\t: \"799.99\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -151,7 +151,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "        {\r\n        \t\"name\": \"Galaxy S20 Plus\",\r\n    \t\t\"memory\": \"64GB\",\r\n        \t\"colour\": \"Lilac\",\r\n        \t\"price\": \"999.99\"\r\n        }",
+							"raw": "{\r\n\t\"img\" \t\t\t: \"https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE3oYaL?ver=ccfc&q=90&m=6&h=423&w=752&b=%23FFFFFFFF&o=f&aim=true\",\r\n    \"name\" \t\t\t: \"Surface Pro X\",\r\n\t\"description\" \t: \"Built for web-first experiences, Surface Pro X is ultra-thin and always connected, combining blazing-fast LTE with 2-in-1 versatility and edge-to-edge, ultra-slim 13” touchscreen. Surface Pro X                 Keyboard (including rechargeable Slim Pen) sold separately. Wherever the day takes you, be ready for anything with Surface Pro X. Featuring blazing-fast LTE connectivity,3 our thinnest Surface \t\t\t\t   stands out with two USB-C® ports and a stunning, virtually edge-to-edge 13” touchscreen.\",\r\n    \"colour\" \t\t: \"Black\",\r\n\t\"memory\" \t\t: \"8GB\",\r\n\t\"storage\"\t\t: \"128GB\",\r\n\t\"price\" \t\t: \"899.99\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -159,7 +159,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/surfaces/5e4fb00832f6de5a426e9e22",
+							"raw": "http://localhost:3000/surfaces/5e5d17eecae4600bc41311c9",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -167,7 +167,46 @@
 							"port": "3000",
 							"path": [
 								"surfaces",
-								"5e4fb00832f6de5a426e9e22"
+								"5e5d17eecae4600bc41311c9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get an array of Consoles",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/consoles/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"consoles",
+								""
 							]
 						}
 					},
@@ -344,7 +383,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\t\"img\"\t\t\t: \"https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE3rhgV?ver=0e9d&w=498&h=408&q=90&m=6&b=%23FFF0F0F0&f=jpg&o=f&p=0&aim=true\",\r\n\t\"name\"\t\t\t: \"Surface Pro X Signature Keyboard with Slim Pen Bundle\",\r\n\t\"description\"\t: \"Next-level versatility comes in the perfect pair. Surface Slim Pen stores securely and recharges in the premium Surface Pro X Signature Keyboard with Slim Pen, featuring a large glass trackpad and luxurious, \t\t\t\t\t  Alcantara® material covering. Surface Pro X Signature Keyboard with Slim Pen is compatible with Surface Pro X only.\",\r\n\t\"colour\"\t\t: \"Purple\",\r\n\t\"price\" \t\t: \"259.99\"\r\n}",
+							"raw": "{\r\n\t\"img\"\t\t\t: \"https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE3rhgV?ver=0e9d&w=498&h=408&q=90&m=6&b=%23FFF0F0F0&f=jpg&o=f&p=0&aim=true\",\r\n\t\"name\"\t\t\t: \"Surface Pro X Signature Keyboard with Slim Pen Bundle\",\r\n\t\"description\"\t: \"Next-level versatility comes in the perfect pair. Surface Slim Pen stores securely and recharges in the premium Surface Pro X Signature Keyboard with Slim Pen, featuring a large glass trackpad and \t\t\t  luxurious, Alcantara® material covering. Surface Pro X Signature Keyboard with Slim Pen is compatible with Surface Pro X only.\",\r\n\t\"colour\"\t\t: \"Purple\",\r\n\t\"price\" \t\t: \"269.99\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -352,7 +391,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/accessories/5e53d544971a44e01a316085",
+							"raw": "http://localhost:3000/accessories/5e53d544971a44e01a316085/",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -360,7 +399,203 @@
 							"port": "3000",
 							"path": [
 								"accessories",
-								"5e53d544971a44e01a316085"
+								"5e53d544971a44e01a316085",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Consoles",
+			"item": [
+				{
+					"name": "Get an array of Consoles",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/consoles/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"consoles",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a single Console (by ID)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/consoles/5e6151ebd224c9e8581c4c13/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"consoles",
+								"5e6151ebd224c9e8581c4c13",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add an Console",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"img\": \"https://compass-ssl.xbox.com/assets/c6/6b/c66b3c27-0c9c-4ee6-9243-869675526a74.jpg?n=X1X-993554_Content-Placement-0_Console-hub_740x417_02.jpg\",\r\n    \"name\": \"Xbox One X Star Wars Jedi: Fallen Order™ Bundle (1TB)\",\r\n    \"description\": \"Xbox One X 1TB console I Xbox Wireless controller I Star Wars Jedi: Fallen Order™ Deluxe Edition I 1-month of EA Access\",\r\n    \"colour\": \"Black\",\r\n    \"storage\": \"1TB\",\r\n    \"price\": \"499.99\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/consoles/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"consoles",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a single Console (by ID)",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/consoles/5e6151ebd224c9e8581c4c10/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"consoles",
+								"5e6151ebd224c9e8581c4c10",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a single Console (by ID)",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"img\": \"https://compass-ssl.xbox.com/assets/c6/6b/c66b3c27-0c9c-4ee6-9243-869675526a74.jpg?n=X1X-993554_Content-Placement-0_Console-hub_740x417_02.jpg\",\r\n    \"name\": \"Xbox One X Star Wars Jedi: Fallen Order™ Bundle (1TB)\",\r\n    \"description\": \"Xbox One X 1TB console I Xbox Wireless controller I Star Wars Jedi: Fallen Order™ Deluxe Edition I 1-month of EA Access\",\r\n    \"colour\": \"Black\",\r\n    \"storage\": \"1TB\",\r\n    \"price\": \"499.99\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/consoles/5e6151ebd224c9e8581c4c13/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"consoles",
+								"5e6151ebd224c9e8581c4c13",
+								""
 							]
 						}
 					},

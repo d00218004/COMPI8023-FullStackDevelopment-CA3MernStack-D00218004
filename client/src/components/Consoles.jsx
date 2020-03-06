@@ -7,7 +7,7 @@ import { GridListTile } from '@material-ui/core';
 import Row from 'react-bootstrap/Row';
 import Card from 'react-bootstrap/Card';
 import console from './images/shop-xbox-slider.jpg';
-
+import Button from 'react-bootstrap/Button';
 class Consoles extends React.Component {
 
   // #######################################################
@@ -66,8 +66,9 @@ class Consoles extends React.Component {
               </GridListTile>
             ))}
           </GridList>
-
-          <p><Link to='/consoles/add-console'>Add a new Console</Link></p>
+          <center>
+          <Button href='/consoles/add-console'>Add a new Console</Button>
+          </center>
         </div>
       )
     }

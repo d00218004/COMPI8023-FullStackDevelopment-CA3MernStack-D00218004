@@ -1,3 +1,5 @@
+/* Imported this code used in my previous CA2 Full Stack Development*/
+
 import React from 'react';
 import { Card, CardDeck } from 'react-bootstrap';
 

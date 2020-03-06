@@ -3,6 +3,7 @@ import { navigate, Link } from '@reach/router';
 import urlToCurrentDomain from '../lib/urlToCurrentDomain';
 import * as Config from '../config.json';
 import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
 class AddAccessory extends React.Component {
 
   // #######################################################
@@ -77,7 +78,7 @@ class AddAccessory extends React.Component {
               </Card.Text>
               </form>
               <br></br>
-              <Link to='/accessories'>Back to All Accessories</Link>
+              <Button href='/accessories' variant="success">Back to All Accessories</Button>
             </Card.Body>
           </Card>
           </center>

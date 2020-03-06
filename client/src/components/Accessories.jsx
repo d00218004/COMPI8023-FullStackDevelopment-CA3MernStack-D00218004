@@ -7,6 +7,7 @@ import { GridListTile } from '@material-ui/core';
 import Row from 'react-bootstrap/Row';
 import Card from 'react-bootstrap/Card';
 import accessory from './images-resized/shop-accessories-slider.jpg';
+import Button from 'react-bootstrap/Button';
 class Accessories extends React.Component {
 
   // #######################################################
@@ -65,8 +66,9 @@ class Accessories extends React.Component {
               </GridListTile>
             ))}
           </GridList>
-
-          <p><Link to='/accessories/add-accessory'>Add a new Accessory</Link></p>
+          <center>
+          <Button href='/accessories/add-accessory'>Add a new Accessory</Button>
+          </center>
         </div>
 
 

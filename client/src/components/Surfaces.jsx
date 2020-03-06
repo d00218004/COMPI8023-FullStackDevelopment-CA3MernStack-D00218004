@@ -67,8 +67,9 @@ class Surfaces extends React.Component {
               </GridListTile>
             ))}
           </GridList>
-
-          <p><Link to='/surfaces/add-surface'>Add a new Surface</Link></p>
+          <center>
+          <Button href='/surfaces/add-surface'>Add a new Surface</Button>
+          </center>
         </div>
       )
     }

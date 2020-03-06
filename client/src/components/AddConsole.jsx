@@ -3,6 +3,7 @@ import {navigate, Link}   from '@reach/router';
 import urlToCurrentDomain from '../lib/urlToCurrentDomain';
 import * as Config        from '../config.json'
 import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
 class AddConsole extends React.Component {
 
   // #######################################################
@@ -77,7 +78,7 @@ class AddConsole extends React.Component {
               </Card.Text>
               </form>
               <br></br>
-              <Link to='/consoles'>Back to All Consoles</Link>
+              <Button href='/consoles' variant="success">Back to All Consoles</Button>
             </Card.Body>
           </Card>
           </center>

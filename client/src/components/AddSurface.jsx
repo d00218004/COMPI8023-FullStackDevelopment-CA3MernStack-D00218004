@@ -5,6 +5,7 @@ import * as Config        from '../config.json'
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
+import Button from 'react-bootstrap/Button';
 
 class AddSurface extends React.Component {
 
@@ -124,12 +125,12 @@ class AddSurface extends React.Component {
                 </Col>
                 </Row>
                 <div>
-                  <input type='submit' value='Add Accessory' />
+                  <input type='submit' value='Add Surface' />
                 </div>
               </Card.Text>
               </form>
               <br></br>
-              <Link to='/accessories'>Back to All Accessories</Link>
+              <Button href='/surfaces' variant="success">Back to All Surfaces</Button>
             </Card.Body>
           </Card>
           </center>
