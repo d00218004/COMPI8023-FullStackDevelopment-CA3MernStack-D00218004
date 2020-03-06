@@ -1,8 +1,8 @@
-import React              from 'react';
-import {navigate, Link}   from '@reach/router';
+import React from 'react';
+import { navigate, Link } from '@reach/router';
 import urlToCurrentDomain from '../lib/urlToCurrentDomain';
-import * as Config        from '../config.json'
-
+import * as Config from '../config.json';
+import Card from 'react-bootstrap/Card';
 class AddAccessory extends React.Component {
 
   // #######################################################
@@ -10,11 +10,11 @@ class AddAccessory extends React.Component {
   // #######################################################
 
   state = {
-    img         : '',
-    name        : '',
-    description : '',
-    colour      : '',
-    price       : ''
+    img: '',
+    name: '',
+    description: '',
+    colour: '',
+    price: ''
   }
 
   // #######################################################
@@ -39,59 +39,74 @@ class AddAccessory extends React.Component {
     } else {
       return (
         <div>
-          <h1>Add an Accessory</h1>
-          <form onSubmit={this.handleSubmit.bind(this)}>
+        <center>
+          <Card id="product-card" style={{ width: '50rem' }}>
+            <Card.Body>
+              <h2>Add an Accessory</h2>
+              <br></br><br></br>
+              <form onSubmit={this.handleSubmit.bind(this)}>
+              <Card.Text>
+                <label className='col-12'>Image ( URL ):
+                <div>
+                <input id="input-box" type='' value={this.state.Img} onChange={this.handleImgUpdate.bind(this)} />
+                </div>
+                </label>
+                <label className='col-12 col-md-9'>Name:
+                <div>
+                <input id="input-box" type='' value={this.state.name} onChange={this.handleNameUpdate.bind(this)} />
+                </div>
+                </label>
+                <label className='col-12 col-md-9'>Description:
+                <div>
+                <input id="input-box" type='' value={this.state.description} onChange={this.handleDescriptionUpdate.bind(this)} />
+                </div>
+                </label>
+                <label className='col-12 col-md-9'>Colour:
+                <div>
+                <input id="input-box" type='' value={this.state.colour} onChange={this.handleColourUpdate.bind(this)} />
+                </div>
+                </label>
+                <label className='col-12 col-md-9'>Price:
+                <div>
+                €<input id="input-box" type='' value={this.state.price} onChange={this.handlePriceUpdate.bind(this)}/>
+                </div>
+                </label>
+                <div>
+                  <input type='submit' value='Add Accessory' />
+                </div>
+              </Card.Text>
+              </form>
+              <br></br>
+              <Link to='/accessories'>Back to All Accessories</Link>
+            </Card.Body>
+          </Card>
+          </center>
 
-            <div>
-              <label>Image ( URL ):
-                <input type='' value={this.state.Img} onChange={this.handleImgUpdate.bind(this)} />
-              </label>
-              <label>Name:
-                <input type='' value={this.state.name} onChange={this.handleNameUpdate.bind(this)} />
-              </label>
-              <label>Description:
-                <input type='' value={this.state.description} onChange={this.handleDescriptionUpdate.bind(this)} />
-              </label>
-              <label>Colour:
-                <input type='' value={this.state.colour} onChange={this.handleColourUpdate.bind(this)} />
-              </label>
-              <label>Price:
-                <input type='' value={this.state.price} onChange={this.handlePriceUpdate.bind(this)} />
-              </label>
-            </div>
-            
-
-            {/* <div>
+              {/* <div>
               <label>Accessory Content:
                 <textarea value={this.state.content} onChange={this.handleContentUpdate.bind(this)}></textarea>
               </label>
             </div> */}
 
-            <div>
-              <input type='submit' value='Add Accessory' />
-            </div>
-
-          </form>
-          <Link to='/accessories'>Back to All Accessories</Link>
         </div>
       );
     }
   }
 
   handleImgUpdate(e) {
-    this.setState({img: e.target.value || null});
+    this.setState({ img: e.target.value || null });
   }
   handleNameUpdate(e) {
-    this.setState({name: e.target.value || null});
+    this.setState({ name: e.target.value || null });
   }
   handleDescriptionUpdate(e) {
-    this.setState({description: e.target.value || null});
+    this.setState({ description: e.target.value || null });
   }
   handleColourUpdate(e) {
-    this.setState({colour: e.target.value || null});
+    this.setState({ colour: e.target.value || null });
   }
   handlePriceUpdate(e) {
-    this.setState({price: e.target.value || null});
+    this.setState({ price: e.target.value || null });
   }
   /*
   handleContentUpdate(e) {
@@ -105,33 +120,34 @@ class AddAccessory extends React.Component {
 
     // Perform a POST call for the new data
     fetch(urlToCurrentDomain(`${Config.accessoriesAPI}`), {
-      method : 'POST',
+      method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        img         : this.state.img,
-        name        : this.state.name,
-        description : this.state.description,
-        colour      : this.state.colour,
-        price       : this.state.price
-      })}
+        img: this.state.img,
+        name: this.state.name,
+        description: this.state.description,
+        colour: this.state.colour,
+        price: this.state.price
+      })
+    }
     )
-      .then (res  => {
+      .then(res => {
         if (res.status >= 400) {
           throw new Error(res.statusText);
         }
         return res.json();
       })
-      .then (json => navigate(`/accessory/${json._id}`))
+      .then(json => navigate(`/accessory/${json._id}`))
       .catch(err => {
-        this.setState({reportedError: err.message || 'Unknown'});
+        this.setState({ reportedError: err.message || 'Unknown' });
       })
 
   }
 
   resetForRetry() {
-    this.setState({reportedError: null});
+    this.setState({ reportedError: null });
   }
 
   componentDidMount() {

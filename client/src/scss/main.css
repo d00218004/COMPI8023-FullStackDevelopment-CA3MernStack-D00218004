@@ -107,6 +107,16 @@ div.product-image img {
   height: auto;
 }
 
+#input-box {
+  width: 300px;
+  margin-bottom: 20px;
+}
+
+#product-card {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
 .badge-success {
   color: #fff;
   background-color: #28a745;

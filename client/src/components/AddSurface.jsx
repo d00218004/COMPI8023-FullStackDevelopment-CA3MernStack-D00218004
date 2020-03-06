@@ -2,6 +2,9 @@ import React              from 'react';
 import {navigate, Link}   from '@reach/router';
 import urlToCurrentDomain from '../lib/urlToCurrentDomain';
 import * as Config        from '../config.json'
+import Card from 'react-bootstrap/Card';
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
 
 class AddSurface extends React.Component {
 
@@ -43,52 +46,100 @@ class AddSurface extends React.Component {
     } else {
       return (
         <div>
-          <h1>Add a Surface</h1>
-          <form onSubmit={this.handleSubmit.bind(this)}>
+        <center>
+          <Card id="product-card" style={{ width: '50rem' }}>
+            <Card.Body>
+              <h2>Add a Surface</h2>
+              <br></br><br></br>
+              <form onSubmit={this.handleSubmit.bind(this)}>
+              <Card.Text>
+              <Row>
+                  <Col>
+                <label>Image ( URL ):
+                <div>
+                <input id="input-box" type='' value={this.state.Img} onChange={this.handleImgUpdate.bind(this)} />
+                </div>
+                </label>
+                  </Col>
+                  <Col>
+                <label>Name:
+                <div>
+                <input id="input-box" type='' value={this.state.name} onChange={this.handleNameUpdate.bind(this)} />
+                </div>
+                </label>
+                </Col>
+                <Col>
+                <label>Description:
+                <div>
+                <input id="input-box" type='' value={this.state.description} onChange={this.handleDescriptionUpdate.bind(this)} />
+                </div>
+                </label>
+                </Col>
+                <Col>
+                <label>Size:
+                <div>
+                <input id="input-box" type='' value={this.state.size} onChange={this.handleSizeUpdate.bind(this)} />
+                </div>
+                </label>
+                </Col>
+                </Row>
+                <Row>
+                <Col>
+                <label>Colour:
+                <div>
+                <input id="input-box" type='' value={this.state.colour} onChange={this.handleColourUpdate.bind(this)} />
+                </div>
+                </label>
+                </Col>
+                <Col>
+                <label>Memory:
+                <div>
+                <input id="input-box" type='' value={this.state.memory} onChange={this.handleMemoryUpdate.bind(this)} />
+                </div>
+                </label>
+                </Col>
+                <Col>
+                <label>Storage:
+                <div>
+                <input id="input-box" type='' value={this.state.storage} onChange={this.handleStorageUpdate.bind(this)} />
+                </div>
+                </label>
+                </Col>
+                <Col>
+                <label>CPU:
+                <div>
+                <input id="input-box" type='' value={this.state.CPU} onChange={this.handleCPUUpdate.bind(this)} />
+                </div>
+                </label>
+                </Col>
+                <Col>
+                <label>Price:
+                <div>
+                €<input id="input-box" type='' value={this.state.price} onChange={this.handlePriceUpdate.bind(this)}/>
+                </div>
+                </label>
+                </Col>
+                <Col>
 
-            <div>
-              <label>Image ( URL ):
-                <input type='' value={this.state.Img} onChange={this.handleImgUpdate.bind(this)} />
-              </label>
-              <label>Name:
-                <input type='' value={this.state.name} onChange={this.handleNameUpdate.bind(this)} />
-              </label>
-              <label>Description:
-                <input type='' value={this.state.description} onChange={this.handleDescriptionUpdate.bind(this)} />
-              </label>
-              <label>Size:
-                <input type='' value={this.state.size} onChange={this.handleSizeUpdate.bind(this)} />
-              </label>
-              <label>Colour:
-                <input type='' value={this.state.colour} onChange={this.handleColourUpdate.bind(this)} />
-              </label>
-              <label>Memory:
-                <input type='' value={this.state.memory} onChange={this.handleMemoryUpdate.bind(this)} />
-              </label>
-              <label>Storage:
-                <input type='' value={this.state.storage} onChange={this.handleStorageUpdate.bind(this)} />
-              </label>
-              <label>CPU:
-                <input type='' value={this.state.CPU} onChange={this.handleCPUUpdate.bind(this)} />
-              </label>
-              <label>Price:
-                <input type='' value={this.state.price} onChange={this.handlePriceUpdate.bind(this)} />
-              </label>
-            </div>
-            
+                </Col>
+                </Row>
+                <div>
+                  <input type='submit' value='Add Accessory' />
+                </div>
+              </Card.Text>
+              </form>
+              <br></br>
+              <Link to='/accessories'>Back to All Accessories</Link>
+            </Card.Body>
+          </Card>
+          </center>
 
-            {/* <div>
-              <label>Surface Content:
+              {/* <div>
+              <label>Accessory Content:
                 <textarea value={this.state.content} onChange={this.handleContentUpdate.bind(this)}></textarea>
               </label>
             </div> */}
 
-            <div>
-              <input type='submit' value='Add Surface' />
-            </div>
-
-          </form>
-          <Link to='/surfaces'>Back to All Surfaces</Link>
         </div>
       );
     }

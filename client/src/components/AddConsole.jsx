@@ -2,7 +2,7 @@ import React              from 'react';
 import {navigate, Link}   from '@reach/router';
 import urlToCurrentDomain from '../lib/urlToCurrentDomain';
 import * as Config        from '../config.json'
-
+import Card from 'react-bootstrap/Card';
 class AddConsole extends React.Component {
 
   // #######################################################
@@ -39,40 +39,55 @@ class AddConsole extends React.Component {
     } else {
       return (
         <div>
-          <h1>Add a Console</h1>
-          <form onSubmit={this.handleSubmit.bind(this)}>
+        <center>
+          <Card id="product-card" style={{ width: '50rem' }}>
+            <Card.Body>
+              <h2>Add a Console</h2>
+              <br></br><br></br>
+              <form onSubmit={this.handleSubmit.bind(this)}>
+              <Card.Text>
+                <label className='col-12'>Image ( URL ):
+                <div>
+                <input id="input-box" type='' value={this.state.Img} onChange={this.handleImgUpdate.bind(this)} />
+                </div>
+                </label>
+                <label className='col-12 col-md-9'>Name:
+                <div>
+                <input id="input-box" type='' value={this.state.name} onChange={this.handleNameUpdate.bind(this)} />
+                </div>
+                </label>
+                <label className='col-12 col-md-9'>Description:
+                <div>
+                <input id="input-box" type='' value={this.state.description} onChange={this.handleDescriptionUpdate.bind(this)} />
+                </div>
+                </label>
+                <label className='col-12 col-md-9'>Storage:
+                <div>
+                <input id="input-box" type='' value={this.state.storage} onChange={this.handleStorageUpdate.bind(this)} />
+                </div>
+                </label>
+                <label className='col-12 col-md-9'>Price:
+                <div>
+                €<input id="input-box" type='' value={this.state.price} onChange={this.handlePriceUpdate.bind(this)}/>
+                </div>
+                </label>
+                <div>
+                  <input type='submit' value='Add Console' />
+                </div>
+              </Card.Text>
+              </form>
+              <br></br>
+              <Link to='/consoles'>Back to All Consoles</Link>
+            </Card.Body>
+          </Card>
+          </center>
 
-            <div>
-              <label>Image ( URL ):
-                <input type='' value={this.state.Img} onChange={this.handleImgUpdate.bind(this)} />
-              </label>
-              <label>Name:
-                <input type='' value={this.state.name} onChange={this.handleNameUpdate.bind(this)} />
-              </label>
-              <label>Description:
-                <input type='' value={this.state.description} onChange={this.handleDescriptionUpdate.bind(this)} />
-              </label>
-              <label>Storage:
-                <input type='' value={this.state.storage} onChange={this.handleStorageUpdate.bind(this)} />
-              </label>
-              <label>Price:
-                <input type='' value={this.state.price} onChange={this.handlePriceUpdate.bind(this)} />
-              </label>
-            </div>
-            
-
-            {/* <div>
-              <label>Console Content:
+              {/* <div>
+              <label>Accessory Content:
                 <textarea value={this.state.content} onChange={this.handleContentUpdate.bind(this)}></textarea>
               </label>
             </div> */}
 
-            <div>
-              <input type='submit' value='Add Console' />
-            </div>
-
-          </form>
-          <Link to='/consoles'>Back to All Consoles</Link>
         </div>
       );
     }
