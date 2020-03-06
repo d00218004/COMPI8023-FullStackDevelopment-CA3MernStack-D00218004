@@ -12,7 +12,7 @@ Styling was implemented via SASS.
 
 Before editing this project, be sure to have basic understanding of JavaScript, React, Mongo, HTML, CSS/SASS. View the latest Documentation for introduction and help with Components.
 
-Configurations to the Server part of the Website should be ammended through the "server" Folder, and to the Client part, should be ammended through the "client"
+Configurations to the Server part of the Website should be ammended through the "server" Folder, and to the Client part, should be ammended through the "client" Folder.
 
 To run the Server Side of the React Website, Open the Terminal within VS Code, and enter the following commands:
 > cd server
