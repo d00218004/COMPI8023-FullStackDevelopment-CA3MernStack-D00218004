@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.94af6f2b.chunk.css",
+    "main.js": "/static/js/main.8c0013f1.chunk.js",
+    "main.js.map": "/static/js/main.8c0013f1.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.844668cf.js",
+    "runtime-main.js.map": "/static/js/runtime-main.844668cf.js.map",
+    "static/js/2.e757901d.chunk.js": "/static/js/2.e757901d.chunk.js",
+    "static/js/2.e757901d.chunk.js.map": "/static/js/2.e757901d.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.653cef0f10e598cf439a028045c89f06.js": "/precache-manifest.653cef0f10e598cf439a028045c89f06.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.94af6f2b.chunk.css.map": "/static/css/main.94af6f2b.chunk.css.map",
+    "static/js/2.e757901d.chunk.js.LICENSE.txt": "/static/js/2.e757901d.chunk.js.LICENSE.txt",
+    "static/media/shop-accessories-slider.jpg": "/static/media/shop-accessories-slider.3bf47a78.jpg",
+    "static/media/shop-surface-slider.jpg": "/static/media/shop-surface-slider.f3d7f0f4.jpg",
+    "static/media/shop-xbox-slider.jpg": "/static/media/shop-xbox-slider.fe69acb7.jpg",
+    "static/media/slider5.png": "/static/media/slider5.36ece610.png",
+    "static/media/slider7.png": "/static/media/slider7.ba1f13ff.png",
+    "static/media/slider8.png": "/static/media/slider8.56aa9dab.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.844668cf.js",
+    "static/js/2.e757901d.chunk.js",
+    "static/css/main.94af6f2b.chunk.css",
+    "static/js/main.8c0013f1.chunk.js"
+  ]
+}
